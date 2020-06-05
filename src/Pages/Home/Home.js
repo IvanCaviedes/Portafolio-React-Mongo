@@ -7,6 +7,10 @@ import Resumen from '../../Components/Home/Resumen'
 import Servicios from '../../Components/Home/Servicios'
 import Habilidades from '../../Components/Home/Habilidades'
 import Trabajos from '../../Components/Home/Trabajos'
+import Contratame from '../../Components/Home/contratame'
+import Formulario from '../../Components/Home/formulario'
+import Footer from '../../Components/Home/Footer'
+import Subir from '../../Components/Home/Subir'
 
 export default function Home() {
 
@@ -18,7 +22,11 @@ export default function Home() {
             <Resumen />
             <Servicios />
             <Habilidades />
-            <Trabajos/>
+            <Trabajos />
+            <Contratame />
+            <Formulario />
+            <Footer />
+            <Subir />
         </>
     )
 }
