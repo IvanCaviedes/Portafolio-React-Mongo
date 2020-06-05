@@ -25,7 +25,8 @@ export default function Habilidades({ habilidades }) {
                             <div>
                                 <h3>Esta esperando informacion del api!</h3>
                             </div>
-                        </div>}
+                        </div>
+                    }
                 </div>
             </div>
         </div>

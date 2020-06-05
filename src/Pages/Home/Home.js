@@ -6,11 +6,10 @@ import Informacion from '../../Components/Home/Informacion'
 import Resumen from '../../Components/Home/Resumen'
 import Servicios from '../../Components/Home/Servicios'
 import Habilidades from '../../Components/Home/Habilidades'
+import Trabajos from '../../Components/Home/Trabajos'
 
 export default function Home() {
-    const habilidades = [
-        { nombre: 'HTML5', porcentaje: '50' },
-    ]
+
     return (
         <>
             <Loader />
@@ -19,6 +18,7 @@ export default function Home() {
             <Resumen />
             <Servicios />
             <Habilidades />
+            <Trabajos/>
         </>
     )
 }
