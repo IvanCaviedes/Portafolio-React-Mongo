@@ -12,12 +12,12 @@ import Formulario from '../../Components/Home/formulario'
 import Footer from '../../Components/Home/Footer'
 import Subir from '../../Components/Home/Subir'
 
-export default function Home() {
-
+export default function Home({cabeza,Info,Resu,Servi,Habi,Traba,Conta}) {
+    console.log(cabeza,Info,Resu,Servi,Habi,Traba,Conta)
     return (
         <>
             <Loader />
-            <Header />
+            <Header/>
             <Informacion />
             <Resumen />
             <Servicios />
