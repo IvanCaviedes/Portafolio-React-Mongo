@@ -11,7 +11,7 @@ export default function Habilidades({ habilidades }) {
                     </div>
                 </div>
                 <div className="row row-pb-md">
-                    {habilidades ? habilidades.map((habilidad) => {
+                    {habilidades && habilidades.length>0 ? habilidades.map((habilidad) => {
                         return (
                             <>
                                 <div className="col-md-4 col-sm-6 col-xs-12 text-center">

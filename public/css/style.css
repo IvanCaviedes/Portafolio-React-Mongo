@@ -252,7 +252,27 @@ h1, h2, h3, h4, h5, h6, figure {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+#fh5co-features .feature-center .icon {
+  display: table;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
 #fh5co-features .feature-left .icon i {
+  font-size: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  color: #66CC9A !important;
+}
+#fh5co-features .feature-center .icon i {
   font-size: 50px;
   display: table-cell;
   vertical-align: middle;
@@ -267,7 +287,16 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 400;
   color: #fff;
 }
+#fh5co-features .feature-center h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
 #fh5co-features .feature-left p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+#fh5co-features .feature-center p {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -277,6 +306,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-features .feature-left p a {
   color: #000 !important;
 }
+
 
 #fh5co-about,
 #fh5co-resume,

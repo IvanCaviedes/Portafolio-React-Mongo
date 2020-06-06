@@ -12,7 +12,7 @@ const Informacion = ({ nombre, celular, correo, pais, descripcion, redes }) => {
                     <div className="col-md-4">
                         <ul className="info">
                             <li><span className="first-block">Nombre:</span><span className="second-block">{nombre ? nombre : 'Nombre Api'}</span></li>
-                            <li><span className="first-block">Celular:</span><span className="second-block">{celular ? celular : 'Celular Api'}</span></li>
+                            <li><span className="first-block">Celular:</span><span className="second-block">+57 {celular ? celular : 'Celular Api'}</span></li>
                             <li><span className="first-block">Correo:</span><span className="second-block">{correo ? correo : 'Correo Api'}</span></li>
                             <li><span className="first-block">País:</span><span className="second-block">{pais ? pais : 'Pais'}</span></li></ul>
                     </div>

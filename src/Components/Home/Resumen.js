@@ -12,47 +12,48 @@ export default function Resumen({ estudios }) {
                 <div className="row">
                     <div className="col-md-12 col-md-offset-0">
                         {
-                            estudios ? <ul className="timeline">
-                                <li className="timeline-heading text-center animate-box">
-                                    <div>
-                                        <h3>Que he estudiado!</h3>
-                                    </div>
-                                </li>
-                                {estudios.map((estudio, i) => {
-                                    if (i % 2) {
-                                        return (
-                                            < li className="timeline-inverted animate-box">
-                                                <div className="timeline-badge"><i className={`icon-${estudio.icono ? estudio.icono :'eye-blocked'}`}></i></div>
-                                                <div className="timeline-panel">
-                                                    <div className="timeline-heading">
-                                                        <h3 className="timeline-title">{estudio.titulo}</h3>
-                                                        <span className="company">{estudio.compañia}</span>
+                            estudios && estudios.length > 0 ?
+                                <ul className="timeline">
+                                    <li className="timeline-heading text-center">
+                                        <div>
+                                            <h3>Que he estudiado!</h3>
+                                        </div>
+                                    </li>
+                                    {estudios.map((estudio, i) => {
+                                        if (i % 2) {
+                                            return (
+                                                < li className="timeline-inverted animate__bounce">
+                                                    <div className="timeline-badge"><i className={`icon-${estudio.icono ? estudio.icono : 'eye-blocked'}`}></i></div>
+                                                    <div className="timeline-panel">
+                                                        <div className="timeline-heading">
+                                                            <h3 className="timeline-title">{estudio.titulo}</h3>
+                                                            <span className="company">{estudio.compañia}</span>
+                                                        </div>
+                                                        <div className="timeline-body">
+                                                            <p>{estudio.descripcion}</p>
+                                                        </div>
                                                     </div>
-                                                    <div className="timeline-body">
-                                                        <p>{estudio.descripcion}</p>
+                                                </li>
+                                            )
+                                        }
+                                        else {
+                                            return (
+                                                <li className="timeline-unverted">
+                                                    <div className="timeline-badge"><i className={`icon-${estudio.icono ? estudio.icono : 'eye-blocked'}`}></i></div>
+                                                    <div className="timeline-panel">
+                                                        <div className="timeline-heading">
+                                                            <h3 className="timeline-title">{estudio.titulo}</h3>
+                                                            <span className="company">{estudio.compañia}</span>
+                                                        </div>
+                                                        <div className="timeline-body">
+                                                            <p>{estudio.descripcion}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </li>
-                                        )
-                                    }
-                                    else {
-                                        return (
-                                            <li className="animate-box timeline-unverted">
-                                                <div className="timeline-badge"><i className={`icon-${estudio.icono ? estudio.icono :'eye-blocked'}`}></i></div>
-                                                <div className="timeline-panel">
-                                                    <div className="timeline-heading">
-                                                        <h3 className="timeline-title">{estudio.titulo}</h3>
-                                                        <span className="company">{estudio.compañia}</span>
-                                                    </div>
-                                                    <div className="timeline-body">
-                                                        <p>{estudio.descripcion}</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        )
-                                    }
-                                })}
-                            </ul> :
+                                                </li>
+                                            )
+                                        }
+                                    })}
+                                </ul> :
                                 < div className="timeline-heading text-center animate-box">
                                     <div>
                                         <h3>Esta esperando informacion del api!</h3>

@@ -10,9 +10,9 @@ export default function Trabajos({ trab }) {
                     </div>
                 </div>
                 <div className="row">
-                    {trab ? trab.map((trabajo) => {
+                    {trab && trab.length>0 ? trab.map((trabajo) => {
                         return (
-                            <div className="col-md-3 text-center col-padding animate-box">
+                            <div className="col-md-3 col-sm-6 text-center col-padding ">
                                 <a href={trabajo.link} className="work" style={{ backgroundImage: `url(${trabajo.imagen})` }}>
                                     <div className="desc">
                                         <h3>{trabajo.nombre}</h3>
