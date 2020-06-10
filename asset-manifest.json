@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/HomePagePortafolio/static/js/main.a0c2669b.chunk.js",
-    "main.js.map": "/HomePagePortafolio/static/js/main.a0c2669b.chunk.js.map",
+    "main.js": "/HomePagePortafolio/static/js/main.fb094ceb.chunk.js",
+    "main.js.map": "/HomePagePortafolio/static/js/main.fb094ceb.chunk.js.map",
     "runtime-main.js": "/HomePagePortafolio/static/js/runtime-main.d7009086.js",
     "runtime-main.js.map": "/HomePagePortafolio/static/js/runtime-main.d7009086.js.map",
     "static/js/2.d1d7d6de.chunk.js": "/HomePagePortafolio/static/js/2.d1d7d6de.chunk.js",
     "static/js/2.d1d7d6de.chunk.js.map": "/HomePagePortafolio/static/js/2.d1d7d6de.chunk.js.map",
     "index.html": "/HomePagePortafolio/index.html",
-    "precache-manifest.a33f5aabc752c9ca3d8e870c5fa2451d.js": "/HomePagePortafolio/precache-manifest.a33f5aabc752c9ca3d8e870c5fa2451d.js",
+    "precache-manifest.0a8aab21f499052bc7bd23d61626e28c.js": "/HomePagePortafolio/precache-manifest.0a8aab21f499052bc7bd23d61626e28c.js",
     "service-worker.js": "/HomePagePortafolio/service-worker.js",
     "static/js/2.d1d7d6de.chunk.js.LICENSE.txt": "/HomePagePortafolio/static/js/2.d1d7d6de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d7009086.js",
     "static/js/2.d1d7d6de.chunk.js",
-    "static/js/main.a0c2669b.chunk.js"
+    "static/js/main.fb094ceb.chunk.js"
   ]
 }
