@@ -11,14 +11,14 @@ export default function Habilidades({ habilidades }) {
                     </div>
                 </div>
                 <div className="row row-pb-md">
-                    {habilidades && habilidades.length>0 ? habilidades.map((habilidad) => {
+                    {habilidades && habilidades.length>0 ? habilidades.map((habilidad,i) => {
                         return (
-                            <>
+                            <div key={i}>
                                 <div className="col-md-4 col-sm-6 col-xs-12 text-center">
                                     <div className="chart" data-color="#3ACA68" data-percent={habilidad.porcentaje}><span><strong>{habilidad.nombre}</strong>{habilidad.porcentaje}%</span></div>
                                 </div>
 
-                            </>
+                            </div>
                         )
                     }) :
                         < div className="timeline-heading text-center animate-box">

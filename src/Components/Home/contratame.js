@@ -8,7 +8,7 @@ export default function contratame({ porque }) {
                 <div className="row animate-box">
                     <div className="col-md-8 col-md-offset-2 text-center ">
                         <h2>Contratame!</h2>
-                        <p>{porque?porque:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae veritatis, dolor iure deleniti rerum rem necessitatibus esse repudiandae pariatur aspernatur!'}</p>
+                        <p>{porque && porque.length>0 ?porque:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae veritatis, dolor iure deleniti rerum rem necessitatibus esse repudiandae pariatur aspernatur!'}</p>
                     </div>
                 </div>
             </div>

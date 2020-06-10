@@ -22,7 +22,7 @@ export default function Resumen({ estudios }) {
                                     {estudios.map((estudio, i) => {
                                         if (i % 2) {
                                             return (
-                                                < li className="timeline-inverted animate__bounce">
+                                                < li className="timeline-inverted animate__bounce" key={i}>
                                                     <div className="timeline-badge"><i className={`icon-${estudio.icono ? estudio.icono : 'eye-blocked'}`}></i></div>
                                                     <div className="timeline-panel">
                                                         <div className="timeline-heading">
@@ -38,7 +38,7 @@ export default function Resumen({ estudios }) {
                                         }
                                         else {
                                             return (
-                                                <li className="timeline-unverted">
+                                                <li className="timeline-unverted" key={i}>
                                                     <div className="timeline-badge"><i className={`icon-${estudio.icono ? estudio.icono : 'eye-blocked'}`}></i></div>
                                                     <div className="timeline-panel">
                                                         <div className="timeline-heading">

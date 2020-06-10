@@ -12,15 +12,17 @@ import Formulario from '../../Components/Home/formulario'
 import Footer from '../../Components/Home/Footer'
 import Subir from '../../Components/Home/Subir'
 
+
 export default class Home extends Component {
     state = {
-        url: 'http://localhost:2000/',
+        url: 'https://backenhomepage.herokuapp.com/',
         Hea: [],
         Info: [],
-        Resu:[],
-        Serv:[],
-        Ha:[],
-        Tra:[]
+        Resu: [],
+        Serv: [],
+        Ha: [],
+        Tra: [],
+        Co: []
     }
     componentDidMount() {
         this.Cabecera()
@@ -69,7 +71,7 @@ export default class Home extends Component {
                 throw new Error('Fallo en la Peticion')
             })
             .then(token => {
-                this.setState({ Resu: token.users})
+                this.setState({ Resu: token.users })
                 this.Seri();
             })
             .catch(e => {
@@ -86,7 +88,7 @@ export default class Home extends Component {
                 throw new Error('Fallo en la Peticion')
             })
             .then(token => {
-                this.setState({ Serv: token.users})
+                this.setState({ Serv: token.users })
                 this.Habili();
             })
             .catch(e => {
@@ -103,7 +105,7 @@ export default class Home extends Component {
                 throw new Error('Fallo en la Peticion')
             })
             .then(token => {
-                this.setState({ Ha: token.users})
+                this.setState({ Ha: token.users })
                 this.Trababa();
             })
             .catch(e => {
@@ -120,25 +122,46 @@ export default class Home extends Component {
                 throw new Error('Fallo en la Peticion')
             })
             .then(token => {
-                this.setState({ Tra: token.users})
+                this.setState({ Tra: token.users })
+                this.Contrara();
             })
             .catch(e => {
                 console.log(e)
             })
     }
+    Contrara = () => {
+        const { url } = this.state
+        fetch(url + 'Contratame')
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                }
+                throw new Error('Fallo en la Peticion')
+            })
+            .then(token => {
+                this.setState({ Co: token.users[0].Porque })
+            })
+            .catch(e => {
+                console.log(e)
+            })
+    }
+    Formulario = e => {
+        e.preventDefault()
+        console.log('hola')
+    }
     render() {
-        const { Hea, Info,Resu,Serv,Ha,Tra } = this.state
+        const { Hea, Info, Resu, Serv, Ha, Tra, Co } = this.state
         return (
             <>
                 <Loader />
                 <Header nombre={Hea.nombre} imagen={Hea.imagen} redes={Hea.redes} cargos={Hea.cargos} />
-                <Informacion nombre={Hea.nombre} celular={Info.celular} correo={Info.correo} pais={Info.pais} descripcion={Info.descripcion} redes={Hea.redes}/>
-                <Resumen estudios={Resu}/>
-                <Servicios servicios={Serv}/>
-                <Habilidades  habilidades={Ha}/>
-                <Trabajos trab={Tra}/>
-                <Contratame />
-                <Formulario />
+                <Informacion nombre={Hea.nombre} celular={Info.celular} correo={Info.correo} pais={Info.pais} descripcion={Info.descripcion} redes={Hea.redes} />
+                <Resumen estudios={Resu} />
+                <Servicios servicios={Serv} />
+                <Habilidades habilidades={Ha} />
+                <Trabajos trab={Tra} />
+                <Contratame porque={Co} /> 
+                <Formulario/>
                 <Footer />
                 <Subir />
             </>
